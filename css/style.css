@@ -1,4 +1,43 @@
-button {
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* kanban board */
+.column-container {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+/* kanban columns */
+.column {
+  border: 1px solid #aaa;
+  border-radius: 5%;
+  margin: 20px 0;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.column ul {
+  list-style: none;
+  -webkit-padding-start: 5px;
+          padding-inline-start: 5px;
+}
+
+.column-title {
+  color: white;
+  background-color: #5898f8;
+  padding: 10px 5px;
+}
+
+/* kanban cards */
+.card {
+  margin: 5px 0;
   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ccc;
 }
 /*# sourceMappingURL=style.css.map */

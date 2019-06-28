@@ -69,13 +69,14 @@ document.addEventListener('DOMContentLoaded', function() { // here we will put t
         name: 'Kanban Board',
         addColumn: function(column) {
           this.element.appendChild(column.element);
-          function initSortable(id) {
+          function initSortable(id) { // not working properly sortable plugin to move cards between columns
             var el = document.getElementById(id);
             var sortable = Sortable.create(el, {
               group: 'kanban',
               sort: true
             });
           }
+          //initSortable(column.id);
         },
         element: document.querySelector('#board .column-container')
     };

@@ -1,3 +1,37 @@
-button {
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* kanban board */
+.column-container {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* kanban columns */
+.column {
+    border: 1px solid #aaa;
+    border-radius: 5%;
+    margin : 20px 0;
+    padding: 20px;
+    overflow: scroll;
+    ul {
+        list-style: none;
+        padding-inline-start: 5px;
+    }
+}
+.column-title {
+    color: white;
+    background-color: rgb(88, 152, 248);
+    padding: 10px 5px;
+}
+
+/* kanban cards */
+.card {
+    margin: 5px 0;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ccc;
 }
