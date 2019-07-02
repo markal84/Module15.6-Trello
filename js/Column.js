@@ -68,7 +68,7 @@
         data.append('name', cardName); //appends a new value onto an existing key inside a FormData object, or adds the key if it does not already exist.
         data.append('bootcamp_kanban_column_id', self.id);
         
-        fetch(baseUrl + '/card', { // in case of problems add prefix var
+        fetch(prefix + baseUrl + '/card', { // in case of problems add prefix var
             method: 'POST', // send data to server
             headers: myHeaders,
             body: data,

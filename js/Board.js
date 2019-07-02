@@ -12,7 +12,6 @@ document.querySelector('#board .create-column').addEventListener('click', functi
     var data = new FormData(); 
     data.append('name', name);
     
-    var prefix = "https://cors-anywhere.herokuapp.com/";
 
     fetch(prefix + baseUrl + '/column', { //in case of problems add prefix var
         method: 'POST', // send data to server
