@@ -1,10 +1,10 @@
 // KLASA KANBAN CARD
-function Card(description) {
+function Card(id, name) {
     var self = this;
 
-    this.id = randomString();
-    this.description = description;
-    this.element = generateTemplate('card-template', { description: this.description }, 'li');
+    this.id = id;
+    this.description = name || 'no name given';
+    this.element = generateTemplate('card-template', { description: this.name }, 'li');
 
     this.element.querySelector('.card').addEventListener('click', function (event) {
       event.stopPropagation();
@@ -16,6 +16,15 @@ function Card(description) {
 }
 Card.prototype = {
   removeCard: function() {
-      this.element.parentNode.removeChild(this.element);
+    var self = this;
+    var prefix = "https://cors-anywhere.herokuapp.com/";
+
+    fetch(prefix + baseUrl + '/card/' + self.id, { method: 'DELETE', headers: myHeaders }) // in case of problems add prefix var
+      .then(function(resp) {
+        return resp.json();
+      })
+      .then(function(resp) {
+        self.element.parentNode.removeChild(self.element);
+      })
   }
 }
