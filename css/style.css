@@ -24,6 +24,7 @@ body {
   list-style: none;
   -webkit-padding-start: 5px;
           padding-inline-start: 5px;
+  min-height: 100px;
 }
 
 .column-title {

@@ -19,6 +19,7 @@ body {
     ul {
         list-style: none;
         padding-inline-start: 5px;
+        min-height: 100px; // if not set you can't move cards to empty column
     }
 }
 .column-title {
